@@ -36,7 +36,7 @@ public interface JavaCollection {
 	 * 
 	 * @throws IllegalArgumentException if the array is null.
 	**/
-	public Set<?> sort(Object[] array) throws IllegalArgumentException;
+	public Set<?> sort(Person[] array) throws IllegalArgumentException;
 	
 	/**
 	 * 3. The Brackets problem of the first assignment.

@@ -1,14 +1,12 @@
 package com.revature.collection;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.Stack;
+import java.util.TreeSet;
 
 public class JavaCollectionSolutions implements JavaCollection {
 	
@@ -28,6 +26,12 @@ public class JavaCollectionSolutions implements JavaCollection {
 		
 		System.out.println(balancedBrackets("{[({})]}"));
 		
+		Person[] people = new Person[] {new Person(5),new Person(3), new Person(4),new Person(6),new Person(1)};
+		
+		Set<Person> tree = sort(people);
+		for (Person person:tree)
+			System.out.println(person.age);
+		
 		
 	}
 
@@ -44,12 +48,18 @@ public class JavaCollectionSolutions implements JavaCollection {
 	}
 	
 	@Override
-	public Set<?> sort(Object[] array) throws IllegalArgumentException {
+	public Set<Person> sort(Person[] array) throws IllegalArgumentException {
 		if (array==null) {
 			throw new IllegalArgumentException();
 		}
 		
-		return null;
+		TreeSet<Person> output = new TreeSet<>();
+		
+		for (Person person: array) {
+			output.add(person);
+		}
+		
+		return output;
 	}
 
 	@Override
